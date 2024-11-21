@@ -1,48 +1,4 @@
 
-<div align="center">
-  <img src="public/banner.png" alt="Banner" />
-</div>
-
-
-
-
-
-<p></p>
-
-
-<div align="center" >
-  <h1>Dashboard</h1>
-  
-  <p>Feel free to connect with me on the following platforms:</p>
-<div>
-  <a href="https://www.linkedin.com/in/karthikeyakollu/" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=flat" height="35" alt="LinkedIn logo" />
-  </a>
-  <a href="mailto:karthikeyakollu8@gmain.com" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=flat" height="35" alt="Gmail logo" />
-  </a>
-  <a href="https://twitter.com/karthikeya2412" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=flat" height="35" alt="Twitter logo" />
-  </a>
-  <a href="https://wa.me/+919346332404" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Whatsapp&logo=whatsapp&label=&color=25D366&logoColor=white&labelColor=&style=flat" height="35" alt="Whatsapp logo" />
-  </a>
-  <a href="https://www.instagram.com/karthikeya.kollu/" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=flat" height="35" alt="Instagram logo" />
-  </a>
-</div>
-
-</div>
-
-<div  >
-  <h1>WorkingDemo</h1>
-</div>
-
-<p>This is the working demo for the assignment</p>
-
-[Chat Interface Overview](https://github.com/user-attachments/assets/470e4e08-5950-4962-9aaa-bd99c16c1585)
-
-
 # Product Tab and Invoice Integration
 
 1. **Product Tab Features:**
@@ -174,9 +130,5 @@
 
 <p>Latest version of my extension has better features.</p>
 
-[Chat Interface Overview](https://github.com/KarthikeyaKollu/browserAI.01/assets/108949445/d62073b4-cdde-46dd-8b14-8ba0c46206db)
-
-
-<p>You can find more at <a href="https://github.com/KarthikeyaKollu/Orian-Ollama-WebUI" target="_blank">this GitHub link</a>..</p>
 
 
