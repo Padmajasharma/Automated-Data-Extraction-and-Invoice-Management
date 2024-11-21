@@ -1,7 +1,3 @@
-Here’s a polished and well-structured README file for your GitHub project:
-
----
-
 # Automated Data Extraction and Invoice Management  
 
 This project streamlines product management and invoice creation by integrating advanced features like Redux store management, currency conversion, automatic product population, and seamless invoice-product integration.  
