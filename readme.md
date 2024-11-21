@@ -1,72 +1,65 @@
+Here’s a polished and well-structured README file for your GitHub project:
 
-# Product Tab and Invoice Integration
+---
 
-1. **Product Tab Features:**
-    - A Redux store is used to manage the product list.
-    - Products can be filtered by name or description.
-    - Currency can be converted from the base currency (the one the item is created with) to a target currency.
+# Automated Data Extraction and Invoice Management  
 
-2. **Product Form:**
-    - Supports uploading up to 3 images.
-    - All fields in the product form are important and required.
-    - Checks for existing items by name, but it’s better to check by product ID.
+This project streamlines product management and invoice creation by integrating advanced features like Redux store management, currency conversion, automatic product population, and seamless invoice-product integration.  
 
-3. **Automatic Product Population:**
-    - If a product already exists when trying to create it, the form will automatically populate with the existing details.
-    - If the product is updated, the original product details will also be updated.
+## **Features**  
 
-4. **Invoice and Product Integration:**
-    - When adding a new item or product to the invoice, the original product’s details and currency are modified.
-    - The invoice form checks if the product exists in the product list:
-      - If the product exists, the invoice form is updated with the existing product details.
-      - New and old item IDs are stored in an array so that the product can be queried using the item ID.
-      - When a product is changed, it will be reflected wherever the item is used.
-    - I didn’t modify the previous implementation of the invoice form, which stores actual item details. I only added an item ID so that product changes affect the invoice where the item is used.
+### **1. Product Tab**  
+- **Redux Integration:** Efficiently manages the product list.  
+- **Search and Filter:** Products can be filtered by name or description.  
+- **Currency Conversion:** Supports currency conversion from the base to the target currency.  
 
-5. **Currency States:**
-    - **Local Currency State:** Used only when creating an invoice or product. This can be changed only in the invoice or product form.
-    - **Global Currency State:** Used for converting any amount to the target currency. The local currency state won’t work for global conversions to prevent conflicts and confusion.
+### **2. Product Form**  
+- Allows uploading up to **3 images** per product.  
+- All fields are mandatory to ensure data consistency.  
+- Automatically checks for existing products by name or ID.  
 
+### **3. Automatic Product Population**  
+- Pre-fills the form if a product already exists, allowing for easy updates.  
+- Ensures changes to products are reflected globally.  
 
-  
+### **4. Invoice and Product Integration**  
+- Links invoices with product details for seamless updates.  
+- Automatically updates invoice details when a product is modified.  
+- Stores product references using **item IDs** for efficient querying.  
 
-# Tools I Used
+### **5. Currency State Management**  
+- **Local State:** Used during product or invoice creation.  
+- **Global State:** Used for broader currency conversions to avoid conflicts.  
 
-* Continue VS Code Extension
-* Open Web UI for documentation search
-* ClaudeAI for converting images(Design) to UI
-* ChatGPT (used occasionally)
+---
 
+## **Development Tools**  
 
+- **Continue VS Code Extension:** For efficient coding and debugging.  
+- **Ollama Web UI:** For documentation search and development assistance.  
+- **ClaudeAI & ChatGPT:** Assisted in converting designs to UI and logic refinement.  
 
+---
 
+## **Learning Curve & Development Process**  
 
-# My Learning Curve and Development Process
+- **Bootstrap:** First-time integration with the framework.  
+- **Image-to-Code Conversion:** Process streamlined to 30–50 minutes per component.  
+- **Redux Integration:** Store management and edge-case handling took ~2 hours.  
+- **Documentation & Video Editing:** Completed within 2 hours.  
+- **Total Development Time:** 8–12 hours, focusing on logic optimization and edge-case handling.  
 
-* **Previous Experience:**
-  * Before this project, I hadn’t worked  with Bootstrap. My experience was primarily with React, Tailwind, and TypeScript.
+---
 
-* **Converting Images to Code:**
-  * The process of converting images to code took me around 30-50 minutes.
+## **Component Tree**  
 
-* **Integrating Redux and Store Management:**
-  * I spent about 2 hours integrating Redux and managing the store logic, making sure to handle all possible edge cases that could occur.
-
-* **Documentation and Video Editing:**
-  * I spent around 2 hours on documentation, video recording, and editing.
-
-* **Other Tasks:**
-  * The entire development process took about 8-12 hours in total, with most of the time spent solving problems, refining the logic, and thinking through better solutions as I progressed.
-
-
-
-## Component Tree
 <div align="center">
-  <img src="public/tree.png" alt="Banner" />
+  <img src="public/tree.png" alt="Component Tree" />
 </div>
 
+---
 
-## Folder Structure
+## **Folder Structure**  
 
 ```bash
 |-- swipe-assignment-frontend
@@ -79,16 +72,8 @@
     |-- package-lock.json
     |-- package.json
     |-- src
-        |-- favicon-16x16.png
-        |-- favicon.ico
-        |-- index.html
-        |-- reportWebVitals.js
-        |-- store.js
-        |-- App.css
-        |-- index.js
         |-- utils
             |-- generateRandomId.js
-        |-- index.css
         |-- components
             |-- InvoiceModal.jsx
             |-- EditableField.jsx
@@ -113,22 +98,26 @@
             |-- index.js
             |-- productsSlice.js
         |-- App.js
-        |-- favicon-32x32.png
+        |-- App.css
+        |-- index.js
+        |-- index.css
+        |-- reportWebVitals.js
 |-- test.py
 |-- package-lock.json
 |-- package.json
-
 ```
 
-<h2>My Extension</h2>
-<p>
-  Orian (Ollama WebUI) is a Chrome extension that provides quick access to your favorite local Language Model (LLM) directly from your browser. With features like open-source chat integration, mail reply suggestions, and more, it's designed to enhance your browsing experience with AI capabilities.
-</p>
-<p>Here are the working demos:</p>
+---
 
-[Email](https://github.com/user-attachments/assets/a714bbe3-a146-4e7f-b096-da210b653383)
+## **Extension: Orian (Ollama WebUI)**  
 
-<p>Latest version of my extension has better features.</p>
+Orian is a Chrome extension offering quick access to your local Language Model (LLM).  
+### **Key Features**:  
+- Open-source chat integration.  
+- AI-powered email reply suggestions.  
+- Enhanced browsing experience through advanced AI capabilities.  
 
 
+---
 
+Feel free to use this structure or suggest edits if you’d like further customization!
