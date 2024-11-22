@@ -1,13 +1,12 @@
 html {
-  font-size: 0.9rem;
-  background: #f9fafc;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #f3f4f6, #e9ecef);
 }
 
 body,
 .form-control {
-  font-size: 0.9rem;
-  font-family: 'Roboto', sans-serif; /* Modern and clean font */
-  color: #333; /* Neutral text color */
+  font-family: 'Inter', sans-serif;  /* Sleek, modern font */
+  color: #2c3e50;                   /* Slightly deeper neutral text color */
 }
 
 body,
@@ -15,44 +14,47 @@ html,
 #root,
 .App {
   min-height: 100vh;
+  margin: 0;
 }
 
 .btn {
   font-size: 0.9rem;
   font-weight: 600;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.75rem;
   border: none;
   color: #fff;
-  background-color: #007bff;
-  box-shadow: 0 0.15rem 0.3rem rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #0056b3;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #4e0fa6, #1d5cbd);
+  transform: translateY(-3px);
+  box-shadow: 0 0.35rem 0.7rem rgba(0, 0, 0, 0.2);
 }
 
 .App-link {
-  color: #007bff;
+  color: #3498db;
   text-decoration: none;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.3s ease;
 }
 
 .App-link:hover {
-  color: #0056b3;
+  color: #2c81ba;
 }
 
 .btn-light {
-  border: 1px solid #dedede;
-  color: #333;
-  background-color: #f8f9fa;
+  border: 1px solid #d1d3e2;
+  color: #444;
+  background-color: #ffffff;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .btn-light:hover {
-  background-color: #e9ecef;
-  border-color: #ccc;
+  background-color: #f0f2f5;
+  box-shadow: 0 0.15rem 0.3rem rgba(0, 0, 0, 0.08);
 }
 
 .cursor-pointer {
@@ -60,142 +62,68 @@ html,
 }
 
 .shadow {
-  box-shadow: 0 0.15rem 0.3rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
 }
 
 .modal-content,
 .card {
   overflow: hidden;
-  border-radius: 0.75rem;
+  border-radius: 0.85rem;
+  box-shadow: 0 0.25rem 0.6rem rgba(0, 0, 0, 0.1);
 }
 
 hr {
-  opacity: 0.2;
+  border: none;
+  height: 1px;
+  background-color: #dcdcdc;
+  opacity: 0.4;
 }
 
-.table th {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.table td {
-  text-align: left;
-}
-
-.table tr th:first-child,
-.table tr td:first-child {
-  padding-left: 0;
-}
-
-.table tr th:last-child,
-.table tr td:last-child {
-  padding-right: 0;
+.table th, .table td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 0.75rem;
 }
 
 .form-control {
   background: #ffffff;
   font-weight: 400;
-  padding: 0.6rem 0.9rem;
+  padding: 0.7rem 1rem;
   border: 1px solid #ced4da;
-  border-radius: 0.5rem;
-  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 0.6rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-control:focus {
-  border-color: #007bff;
-  box-shadow: 0 0.1rem 0.25rem rgba(0, 123, 255, 0.25);
-}
-
-.form-control::placeholder {
-  color: #adb5bd;
-}
-
-#invoiceCapture {
-  user-select: none;
-}
-
-.App {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  border-color: #6a11cb;
+  box-shadow: 0 0.2rem 0.6rem rgba(106, 17, 203, 0.3);
 }
 
 .sidebar {
-  height: 100%;
-  width: 250px; /* Fixed width for the sidebar */
-  background-color: #f8f9fa;
-  overflow-y: auto;
+  background: #ffffff;
   border-right: 1px solid #e0e0e0;
-  position: fixed;
-  top: 56px; /* Adjust for Navbar height */
-  left: 0;
-  padding: 20px;
+  transition: all 0.3s ease;
 }
 
 .sidebar-link {
-  padding: 12px 20px;
-  display: flex;
-  align-items: center;
-  color: #333;
-  border-radius: 0.5rem;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  padding: 14px 22px;
+  color: #555;
+  border-radius: 0.6rem;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .sidebar-link:hover {
-  background-color: #007bff;
+  background-color: #6a11cb;
   color: #fff;
-}
-
-.sidebar-icon {
-  margin-right: 12px;
-  font-size: 1.2rem;
+  box-shadow: 0 0.2rem 0.6rem rgba(106, 17, 203, 0.2);
 }
 
 .content {
-  margin-left: 250px; /* Match sidebar width */
-  padding: 20px;
-  flex-grow: 1;
+  margin-left: 260px; 
+  padding: 30px;
 }
 
 .card {
-  background-color: #fff;
-  border: none;
-  border-radius: 0.75rem;
-  box-shadow: 0 0.15rem 0.4rem rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-
-.image-upload-container {
-  background-color: #f8f9fa;
-  border: 2px dashed #ccc;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: border-color 0.2s ease, transform 0.2s ease-in-out;
-}
-
-.image-upload-container:hover {
-  border-color: #007bff;
-  transform: scale(1.02);
-}
-
-.image-upload-container.drag-over {
-  border-color: #28a745;
-}
-
-.image-container {
-  position: relative;
-  overflow: hidden;
-  border-radius: 0.5rem;
-}
-
-.product-image {
-  display: block;
-  max-width: 100%;
-  border-radius: 0.5rem;
-  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-}
-
-.image-container:hover .product-image {
-  transform: scale(1.05);
-  filter: blur(1px);
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.05);
 }
