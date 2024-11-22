@@ -1,11 +1,11 @@
 html {
-  font-size: 1rem;
-  background: #f7f8fc; /* Soft background */
+  font-size: 1rem; /* Adjusted font size */
+  background: #f7f8fc;
 }
 
 body,
 .form-control {
-  font-size: 1rem;
+  font-size: 0.9rem; /* Slightly smaller font size */
 }
 
 body,
@@ -18,9 +18,9 @@ html,
 .btn {
   font-size: 1rem;
   font-weight: 500;
-  padding: 0.8rem 1.5rem;
-  border-radius: 50px; /* Rounded edges */
-  background: linear-gradient(135deg, #6c63ff, #00bcd4); /* Gradient */
+  padding: 0.8rem 1.4rem; /* Adjusted padding for a more balanced button */
+  border-radius: 50px;
+  background: linear-gradient(135deg, #6c63ff, #00bcd4);
   color: #fff;
   border: none;
   cursor: pointer;
@@ -29,9 +29,9 @@ html,
 }
 
 .btn:hover {
-  transform: scale(1.05); /* Slightly enlarge button */
+  transform: scale(1.05);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(135deg, #512da8, #03a9f4); /* Darker gradient */
+  background: linear-gradient(135deg, #512da8, #03a9f4);
 }
 
 .App-link {
@@ -43,13 +43,13 @@ html,
   background-color: #ffffff;
   border-radius: 16px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  padding: 1.5rem;
   transition: all 0.3s ease-out;
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Slight lift effect on hover */
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); /* Larger shadow */
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 hr {
@@ -74,21 +74,21 @@ hr {
 }
 
 .form-control:focus {
-  border-color: #00bcd4; /* Focus color */
-  box-shadow: 0 0 10px rgba(0, 188, 212, 0.2); /* Glow effect */
+  border-color: #00bcd4;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
   background: #ffffff;
 }
 
 .table th {
-  padding: 1rem;
-  background-color: #f0f1f6; /* Soft background for header */
+  padding: 0.8rem;
+  background-color: #f0f1f6;
   border-bottom: 1px solid #e0e0e0;
   font-weight: 600;
 }
 
 .table td {
-  padding: 1rem;
-  color: #555; /* Darker text for readability */
+  padding: 0.8rem;
+  color: #555;
 }
 
 .sidebar {
@@ -104,7 +104,7 @@ hr {
 }
 
 .sidebar-link {
-  padding: 15px 20px;
+  padding: 12px 20px;
   color: #333;
   display: flex;
   align-items: center;
@@ -124,7 +124,7 @@ hr {
 }
 
 .content {
-  padding: 2rem;
+  padding: 1.5rem;
   flex-grow: 1;
   background-color: #ffffff;
   border-radius: 16px;
@@ -140,13 +140,13 @@ hr {
 }
 
 .image-upload-container:hover {
-  border-color: #00bcd4; /* Blue border */
-  filter: brightness(1.1); /* Brighten on hover */
-  transform: scale(1.02); /* Slight scale-up effect */
+  border-color: #00bcd4;
+  filter: brightness(1.1);
+  transform: scale(1.02);
 }
 
 .image-upload-container.drag-over {
-  filter: blur(4px); /* Blur during drag */
+  filter: blur(4px);
   border-color: #007bff;
 }
 
@@ -161,11 +161,11 @@ hr {
 }
 
 .image-container:hover .product-image {
-  filter: blur(2px); /* Blur effect on hover */
+  filter: blur(2px);
 }
 
 .invoice-header {
-  font-size: 1.5rem;
+  font-size: 1.3rem; /* Slightly smaller header */
   font-weight: 700;
   color: #333;
   text-align: center;
@@ -176,7 +176,7 @@ hr {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .invoice-form .form-group {
@@ -200,8 +200,8 @@ hr {
 }
 
 .invoice-actions .btn {
-  font-size: 1.1rem;
-  padding: 0.8rem 1.5rem;
+  font-size: 1rem; /* Adjusted button font size */
+  padding: 0.8rem 1.4rem;
   margin-left: 1rem;
 }
 
