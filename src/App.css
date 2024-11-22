@@ -1,12 +1,12 @@
 html {
-  font-size: 0.9rem;
-  background: radial-gradient(circle, #f3f7fc, #e1e9f4); /* Soft radial gradient */
+  font-size: 1rem;
+  background: linear-gradient(135deg, #f7f7f7, #e0e0e0); /* Light, soft gradient background for tranquility */
 }
 
 body,
 .form-control {
-  font-size: 0.9rem;
-  color: #2c2c2c; /* Softer dark text for readability */
+  font-size: 1rem;
+  color: #555555; /* Warm, readable text for contrast */
 }
 
 body,
@@ -14,48 +14,52 @@ html,
 #root,
 .App {
   min-height: 100vh;
+  font-family: 'Roboto', sans-serif; /* Clean, modern font with excellent legibility */
 }
 
 .btn {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 500;
-  padding: 0.75rem 1rem;
-  border-radius: 0.75rem;
-  background: linear-gradient(135deg, #6b9df6, #4a80e3); /* Vibrant gradient */
+  padding: 0.8rem 1.4rem;
+  border-radius: 50px; /* Rounded edges for a sleek, friendly look */
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4); /* Soft pinkish gradient for warmth */
   color: white;
   border: none;
-  box-shadow: 0 4px 12px rgba(74, 128, 227, 0.3); /* Enhanced shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 154, 158, 0.2);
+  transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
-  transform: translateY(-3px); /* Lift on hover */
-  background: linear-gradient(135deg, #4a80e3, #355fa7); /* Darker hover effect */
-  box-shadow: 0 8px 20px rgba(53, 95, 167, 0.4);
+  transform: translateY(-6px); /* Subtle elevation on hover */
+  background: linear-gradient(45deg, #ff6b81, #ff9a9e); /* Richer gradient for hover effect */
+  box-shadow: 0 8px 20px rgba(255, 107, 129, 0.3);
+  filter: brightness(1.15); /* Soft brightness boost */
 }
 
 .App-link {
-  color: #4285f4;
+  color: #6c63ff;
   text-decoration: underline dotted;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .App-link:hover {
-  color: #1e62d6;
+  color: #4a4ae0;
+  text-decoration: underline solid;
 }
 
 .btn-light {
   border: 1px solid #ddd;
-  background-color: #fefefe;
-  color: #555;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+  color: #333;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .btn-light:hover {
   border-color: #bbb;
-  background-color: #f5f5f5;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 .cursor-pointer {
@@ -63,72 +67,86 @@ html,
 }
 
 .shadow {
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12) !important;
 }
 
 .modal-content,
 .card {
   overflow: hidden;
-  border-radius: 16px;
-  background: linear-gradient(145deg, #ffffff, #f8f8f8); /* Soft card gradient */
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-content:hover,
+.card:hover {
+  transform: translateY(-4px); /* Smooth hover effect with slight elevation */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 hr {
-  opacity: 0.3;
-  border-top: 1px solid rgba(200, 200, 200, 0.3); /* Lightened divider */
+  opacity: 0.2;
+  border-top: 1px solid rgba(180, 180, 180, 0.5); /* Soft, lighter divider for gentle separation */
 }
 
 .table th {
-  background-color: #f5f9ff; /* Softer header */
-  color: #444;
+  background-color: #f8f8f8;
+  color: #666;
   font-weight: 600;
-  border-bottom: 2px solid rgba(74, 144, 226, 0.1);
+  padding: 1rem;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.2);
 }
 
 .table td {
-  color: #333;
-  padding: 0.8rem;
+  color: #444;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.table td:hover {
+  background-color: #fafafa; /* Gentle hover effect for rows */
 }
 
 .form-control {
   background: #ffffff;
   border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 0.65rem 0.9rem;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  border-radius: 15px;
+  padding: 0.8rem 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease-in-out;
 }
 
 .form-control:hover,
 .form-control:focus {
-  border-color: #6b9df6;
-  box-shadow: 0 0 10px rgba(107, 157, 246, 0.3);
+  border-color: #ff6b81;
+  box-shadow: 0 0 12px rgba(255, 107, 129, 0.3);
 }
 
 .form-control::placeholder {
-  color: #aaa;
+  color: #bbb;
   font-style: italic;
 }
 
 .sidebar {
-  background: linear-gradient(to bottom, #34495e, #2c3e50); /* Sleek gradient */
+  background: #2d3e50; /* Deep muted blue-gray */
   color: #ecf0f1;
-  border-right: 3px solid #2a3540;
+  border-right: 3px solid #34495e;
+  padding-top: 20px;
 }
 
 .sidebar-link {
-  padding: 14px 24px;
+  padding: 16px 20px;
   color: #ecf0f1;
   display: flex;
   align-items: center;
-  border-radius: 12px;
-  transition: background 0.3s, transform 0.3s, color 0.3s;
+  border-radius: 15px;
+  transition: all 0.3s ease;
 }
 
 .sidebar-link:hover {
-  background: #6b9df6;
+  background: #ff6b81;
   color: white;
-  transform: translateX(8px); /* Slide effect */
+  transform: translateX(10px); /* Subtle sliding effect */
 }
 
 .sidebar-link.active {
@@ -137,33 +155,36 @@ hr {
 }
 
 .card {
-  background: linear-gradient(to top left, #ffffff, #f9fafb);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  padding: 1.2rem;
 }
 
 .image-upload-container {
-  background: #f9fafc;
+  background: #f3f3f3;
   border: 2px dashed #bbb;
-  border-radius: 16px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .image-upload-container:hover {
-  border-color: #6b9df6;
-  box-shadow: 0 0 12px rgba(107, 157, 246, 0.4);
+  border-color: #ff6b81;
+  box-shadow: 0 0 20px rgba(255, 107, 129, 0.3);
 }
 
 .image-container {
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 15px;
 }
 
 .product-image {
-  transition: transform 0.3s ease-in-out, filter 0.3s;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
 }
 
 .image-container:hover .product-image {
-  transform: scale(1.1); /* Bigger zoom on hover */
-  filter: brightness(1.1); /* Subtle brightness */
+  transform: scale(1.1); /* Elegant zoom effect */
+  filter: brightness(1.2); /* Subtle brightness boost */
+  opacity: 0.95; /* Faint transparency effect */
 }
