@@ -1,26 +1,38 @@
 html {
   font-size: 0.9rem;
-  background: #f2f3f7;
+  background: #f2f3f7; /* Soft off-white background */
 }
+
 body,
 .form-control {
   font-size: 0.9rem;
 }
+
 body,
 html,
 #root,
 .App {
   min-height: 100vh;
 }
+
 .btn {
   font-size: 0.9rem;
   font-weight: 500;
   padding: 0.66rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.05) !important;
+  background: #007bff; /* Subtle button background */
+  color: #ffffff; /* White text on buttons */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
 }
+
+.btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
 .App-link {
-  color: #61dafb;
+  color: #61dafb; /* Soft blue color */
 }
 
 .btn-light {
@@ -44,6 +56,8 @@ html,
 .card {
   overflow: hidden;
   border-radius: 0.756rem;
+  background-color: #ffffff; /* White background for cards and modals */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
 }
 
 hr {
@@ -53,15 +67,20 @@ hr {
 .table th {
   border-top: 1px solid #0000001a;
   border-bottom: 1px solid #0000001a;
-  border-bottom-color: #0000001a !important;
+  padding: 1rem;
+  background-color: #f9f9f9; /* Light gray background for table headers */
 }
+
 .table td {
   text-align: left;
+  padding: 1rem;
 }
+
 .table tr th:first-child,
 .table tr td:first-child {
   padding-left: 0;
 }
+
 .table tr th:last-child,
 .table tr td:last-child {
   padding-right: 0;
@@ -71,18 +90,24 @@ hr {
   background: #f5f7f9;
   font-weight: 400;
   padding: 0.5rem 0.75rem;
-  border: none;
+  border: 1px solid #ddd;
+  border-radius: 5px; /* Soft rounded corners for inputs */
+  transition: all 0.3s ease; /* Smooth transition for focus effects */
 }
+
 .form-control:hover {
   background: #f5f7f9;
 }
+
 .form-control::placeholder,
 .form-control::-ms-input-placeholder,
 .form-control:-ms-input-placeholder {
-  color: #9fa8b0;
+  color: #9fa8b0; /* Subtle gray placeholder text */
 }
+
 .form-control:focus {
-  background: #f5f7f9;
+  background: #ffffff;
+  border-color: #007bff; /* Blue border on focus */
 }
 
 #invoiceCapture {
@@ -91,8 +116,6 @@ hr {
   -ms-user-select: none;
   user-select: none;
 }
-
-
 
 .App {
   display: flex;
@@ -108,15 +131,15 @@ hr {
   left: 0;
   background-color: #f8f9fa;
   overflow-y: auto;
-  border-right: 1px solid #e0e0e0; /* Add a border for separation */
+  border-right: 1px solid #e0e0e0; /* Light border for sidebar separation */
 }
 
 .sidebar-link {
   padding: 10px 20px;
-  
   color: #000;
   display: flex; /* Flex for aligning icon and text */
   align-items: center; /* Center the icon and text */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .sidebar-link:hover {
@@ -135,8 +158,8 @@ hr {
 }
 
 .card {
-  border: none; /* Remove border for a cleaner look */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  border: none; /* Remove border for cleaner look */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for card elevation */
 }
 
 body {
@@ -154,22 +177,21 @@ body {
   background-color: #e9ecef; /* Optional background for active link */
 }
 
-
 .image-upload-container {
   background-color: #fafafa;
   border: 2px dashed #ccc;
   cursor: pointer;
   border-radius: 8px;
-  transition: border-color 0.2s ease-in-out, filter 0.3s ease-in-out; /* Add transition for hover */
+  transition: border-color 0.2s ease-in-out, filter 0.3s ease-in-out; /* Smooth transitions */
 }
 
 .image-upload-container:hover {
   border-color: #666;
-  filter: blur(2px); /* Blur the container on hover */
+  filter: brightness(1.1); /* Brighten on hover */
 }
 
 .image-upload-container.drag-over {
-  filter: blur(3px); /* Stronger blur while dragging files over */
+  filter: blur(3px); /* Stronger blur while dragging files */
   border-color: #007bff; /* Change border color when dragging */
 }
 
@@ -183,5 +205,5 @@ body {
 }
 
 .image-container:hover .product-image {
-  filter: blur(2px); /* Blur the image when hovered */
+  filter: blur(2px); /* Apply blur on hover */
 }
