@@ -1,60 +1,36 @@
+body,
 html {
-  font-size: 1rem;
-  background: linear-gradient(135deg, #f3f4f6, #e9ecef);
+  font-size: 0.9rem;
+  background: #f2f3f7;
 }
-
 body,
 .form-control {
-  font-family: 'Inter', sans-serif;  /* Sleek, modern font */
-  color: #2c3e50;                   /* Slightly deeper neutral text color */
+  font-size: 0.9rem;
 }
-
 body,
 html,
 #root,
 .App {
   min-height: 100vh;
-  margin: 0;
 }
-
 .btn {
   font-size: 0.9rem;
-  font-weight: 600;
-  padding: 0.75rem 1.2rem;
-  border-radius: 0.75rem;
-  border: none;
-  color: #fff;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  font-weight: 500;
+  padding: 0.66rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.05) !important;
 }
-
-.btn:hover {
-  background: linear-gradient(135deg, #4e0fa6, #1d5cbd);
-  transform: translateY(-3px);
-  box-shadow: 0 0.35rem 0.7rem rgba(0, 0, 0, 0.2);
-}
-
 .App-link {
-  color: #3498db;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.App-link:hover {
-  color: #2c81ba;
+  color: #61dafb;
 }
 
 .btn-light {
-  border: 1px solid #d1d3e2;
-  color: #444;
-  background-color: #ffffff;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  border-color: #dedede;
 }
 
 .btn-light:hover {
-  background-color: #f0f2f5;
-  box-shadow: 0 0.15rem 0.3rem rgba(0, 0, 0, 0.08);
+  border-color: #dedede;
+  background-color: #f3f3f3;
 }
 
 .cursor-pointer {
@@ -62,68 +38,154 @@ html,
 }
 
 .shadow {
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.05) !important;
 }
 
 .modal-content,
 .card {
   overflow: hidden;
-  border-radius: 0.85rem;
-  box-shadow: 0 0.25rem 0.6rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.756rem;
 }
 
 hr {
-  border: none;
-  height: 1px;
-  background-color: #dcdcdc;
-  opacity: 0.4;
+  opacity: 0.1;
 }
 
-.table th, .table td {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 0.75rem;
+.table th {
+  border-top: 1px solid #0000001a;
+  border-bottom: 1px solid #0000001a;
+  border-bottom-color: #0000001a !important;
+}
+.table td {
+  text-align: left;
+}
+.table tr th:first-child,
+.table tr td:first-child {
+  padding-left: 0;
+}
+.table tr th:last-child,
+.table tr td:last-child {
+  padding-right: 0;
 }
 
 .form-control {
-  background: #ffffff;
+  background: #f5f7f9;
   font-weight: 400;
-  padding: 0.7rem 1rem;
-  border: 1px solid #ced4da;
-  border-radius: 0.6rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.5rem 0.75rem;
+  border: none;
+}
+.form-control:hover {
+  background: #f5f7f9;
+}
+.form-control::placeholder,
+.form-control::-ms-input-placeholder,
+.form-control:-ms-input-placeholder {
+  color: #9fa8b0;
+}
+.form-control:focus {
+  background: #f5f7f9;
 }
 
-.form-control:focus {
-  border-color: #6a11cb;
-  box-shadow: 0 0.2rem 0.6rem rgba(106, 17, 203, 0.3);
+#invoiceCapture {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .sidebar {
-  background: #ffffff;
-  border-right: 1px solid #e0e0e0;
-  transition: all 0.3s ease;
+  height: 100%;
+  border-radius: 5px;
+  position: fixed;
+  top: 56px; /* Adjust for Navbar height */
+  left: 0;
+  background-color: #f8f9fa;
+  overflow-y: auto;
+  border-right: 1px solid #e0e0e0; /* Add a border for separation */
 }
 
 .sidebar-link {
-  padding: 14px 22px;
-  color: #555;
-  border-radius: 0.6rem;
-  transition: background-color 0.3s, color 0.3s;
+  padding: 10px 20px;
+  
+  color: #000;
+  display: flex; /* Flex for aligning icon and text */
+  align-items: center; /* Center the icon and text */
 }
 
 .sidebar-link:hover {
-  background-color: #6a11cb;
+  background-color: #007bff;
   color: #fff;
-  box-shadow: 0 0.2rem 0.6rem rgba(106, 17, 203, 0.2);
+  border-radius: 5px;
+}
+
+.sidebar-icon {
+  margin-right: 10px; /* Space between icon and text */
 }
 
 .content {
-  margin-left: 260px; 
-  padding: 30px;
+  padding: 20px;
+  flex-grow: 1;
 }
 
 .card {
-  background: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.05);
+  border: none; /* Remove border for a cleaner look */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
+
+body {
+  padding-top: 56px; /* Adjust based on the height of your Navbar */
+}
+
+.sidebar-link {
+  color: black; /* Default link color */
+  text-decoration: none;
+}
+
+.sidebar-link.active {
+  font-weight: bold; /* Bold for active link */
+  color: rgb(0, 115, 255); /* Change color for active link */
+  background-color: #e9ecef; /* Optional background for active link */
+}
+
+
+.image-upload-container {
+  background-color: #fafafa;
+  border: 2px dashed #ccc;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: border-color 0.2s ease-in-out, filter 0.3s ease-in-out; /* Add transition for hover */
+}
+
+.image-upload-container:hover {
+  border-color: #666;
+  filter: blur(2px); /* Blur the container on hover */
+}
+
+.image-upload-container.drag-over {
+  filter: blur(3px); /* Stronger blur while dragging files over */
+  border-color: #007bff; /* Change border color when dragging */
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  transition: filter 0.3s ease-in-out; /* Smooth transition for blur effect */
+}
+
+.image-container:hover .product-image {
+  filter: blur(2px); /* Blur the image when hovered */
+}
+
+
+
