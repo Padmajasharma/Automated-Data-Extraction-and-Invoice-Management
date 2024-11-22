@@ -1,11 +1,11 @@
 html {
-  font-size: 0.9rem;
-  background: #f3f4f8; /* Light gray background for a softer overall feel */
+  font-size: 1rem;
+  background: #f7f8fc; /* Softer background for a cleaner feel */
 }
 
 body,
 .form-control {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 body,
@@ -16,24 +16,26 @@ html,
 }
 
 .btn {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
-  padding: 0.66rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
-  background: linear-gradient(135deg, #007bff, #00b4d8); /* Gradient button background */
-  color: #ffffff; /* White text */
-  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  padding: 0.75rem 1.2rem;
+  border-radius: 50px; /* Rounded button edges */
+  background: linear-gradient(135deg, #6c63ff, #00bcd4); /* Gradient with vibrant colors */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out; /* Smooth transition for hover effects */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .btn:hover {
-  background: linear-gradient(135deg, #0056b3, #009ac7); /* Darker gradient on hover */
-  transform: translateY(-2px); /* Slight lift effect */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  background: linear-gradient(135deg, #512da8, #03a9f4); /* Darker gradient on hover */
 }
 
 .App-link {
-  color: #61dafb; /* Soft blue color */
+  color: #61dafb;
   text-decoration: none;
 }
 
@@ -43,7 +45,7 @@ html,
 
 .btn-light:hover {
   border-color: #dedede;
-  background-color: #f3f3f3;
+  background-color: #f7f7f7;
 }
 
 .cursor-pointer {
@@ -51,40 +53,38 @@ html,
 }
 
 .shadow {
-  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .modal-content,
 .card {
   overflow: hidden;
-  border-radius: 12px; /* Rounder corners for a softer look */
-  background-color: #ffffff; /* White background for cards */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Larger shadow for cards */
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth shadow and lift transition */
+  border-radius: 16px; /* Very soft rounded corners */
+  background-color: #ffffff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Larger, softer shadow */
+  transition: all 0.3s ease-out; /* Smooth transition on hover */
 }
 
 .modal-content:hover,
 .card:hover {
-  transform: translateY(-4px); /* Slight lift effect on hover */
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15); /* Deeper shadow for hover */
+  transform: translateY(-4px); /* Slight lift effect */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); /* Stronger shadow effect */
 }
 
 hr {
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
 .table th {
-  border-top: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0;
   padding: 1rem;
-  background-color: #f9fafb; /* Light gray header background */
-  font-weight: 600; /* Bold header text */
+  background-color: #f0f1f6; /* Light gray header */
+  border-bottom: 1px solid #e0e0e0;
+  font-weight: 600;
 }
 
 .table td {
-  text-align: left;
   padding: 1rem;
-  color: #333; /* Darker text for better readability */
+  color: #555; /* Darker text for readability */
 }
 
 .table tr th:first-child,
@@ -98,28 +98,26 @@ hr {
 }
 
 .form-control {
-  background: #f7f9fc; /* Lighter gray background */
+  background: #ffffff;
   font-weight: 400;
-  padding: 0.5rem 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 8px; /* Rounded corners for inputs */
-  transition: all 0.3s ease; /* Smooth transition for focus effects */
+  padding: 0.75rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  transition: all 0.3s ease;
 }
 
 .form-control:hover {
-  background: #ffffff; /* White background on hover */
+  background: #fafafa;
 }
 
-.form-control::placeholder,
-.form-control::-ms-input-placeholder,
-.form-control:-ms-input-placeholder {
-  color: #b0bec5; /* Soft gray placeholder text */
+.form-control::placeholder {
+  color: #aaa; /* Soft gray placeholder */
 }
 
 .form-control:focus {
+  border-color: #00bcd4; /* Focused input border color */
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.2); /* Focus glow */
   background: #ffffff;
-  border-color: #00b4d8; /* Blue border on focus */
-  box-shadow: 0 0 10px rgba(0, 180, 216, 0.2); /* Soft glow around input on focus */
 }
 
 #invoiceCapture {
@@ -137,29 +135,30 @@ hr {
 
 .sidebar {
   height: 100%;
-  border-radius: 8px; /* Softer sidebar edges */
+  border-radius: 16px;
   position: fixed;
-  top: 56px; /* Adjust for Navbar height */
+  top: 56px;
   left: 0;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   overflow-y: auto;
-  border-right: 1px solid #e0e0e0; /* Light border for separation */
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on the sidebar */
+  border-right: 1px solid #e0e0e0;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow for sidebar */
 }
 
 .sidebar-link {
-  padding: 12px 20px;
+  padding: 15px 20px;
   color: #333;
   display: flex;
   align-items: center;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
   font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .sidebar-link:hover {
-  background-color: #00b4d8; /* Blue background on hover */
-  color: #ffffff; /* White text */
-  border-radius: 8px; /* Rounded corners on hover */
+  background-color: #00bcd4;
+  color: #fff;
+  border-radius: 12px;
 }
 
 .sidebar-icon {
@@ -169,53 +168,49 @@ hr {
 .content {
   padding: 24px;
   flex-grow: 1;
-  background-color: #ffffff; /* White background for content */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Soft shadow around content */
-  border-radius: 12px; /* Rounded corners for content */
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft shadow for content */
 }
 
 .card {
   border: none;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft card shadow */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
 body {
-  padding-top: 56px; /* Adjust based on Navbar height */
-}
-
-.sidebar-link {
-  color: #333; /* Default link color */
-  text-decoration: none;
+  padding-top: 56px;
 }
 
 .sidebar-link.active {
-  font-weight: bold; /* Bold for active link */
-  color: rgb(0, 115, 255); /* Blue color for active link */
-  background-color: #e9ecef; /* Optional background for active link */
+  font-weight: bold;
+  color: #ffffff; /* White for active link */
+  background-color: #007bff;
 }
 
 .image-upload-container {
-  background-color: #fafafa;
+  background-color: #f9f9f9;
   border: 2px dashed #ddd;
   cursor: pointer;
-  border-radius: 12px;
-  transition: border-color 0.3s ease, filter 0.3s ease; /* Smooth transitions */
+  border-radius: 16px;
+  transition: border-color 0.3s ease, filter 0.3s ease, transform 0.3s ease;
 }
 
 .image-upload-container:hover {
-  border-color: #00b4d8; /* Blue border on hover */
-  filter: brightness(1.1); /* Slight brightening on hover */
+  border-color: #00bcd4; /* Blue border on hover */
+  filter: brightness(1.1); /* Slight brightening */
+  transform: scale(1.02); /* Slight scale-up effect */
 }
 
 .image-upload-container.drag-over {
-  filter: blur(3px); /* Stronger blur while dragging */
-  border-color: #007bff; /* Change border color when dragging */
+  filter: blur(4px);
+  border-color: #007bff; /* Darker border while dragging */
 }
 
 .image-container {
   position: relative;
   overflow: hidden;
-  border-radius: 12px; /* Rounded image container */
+  border-radius: 16px;
 }
 
 .product-image {
