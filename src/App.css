@@ -1,13 +1,12 @@
 html {
   font-size: 0.9rem;
-  background: linear-gradient(to bottom right, #e3f2fd, #f3e5f5); /* Soft pastel gradient */
-  color: #444;
+  background: radial-gradient(circle, #f3f7fc, #e1e9f4); /* Soft radial gradient */
 }
 
 body,
 .form-control {
   font-size: 0.9rem;
-  color: #333; /* Darker text for readability */
+  color: #2c2c2c; /* Softer dark text for readability */
 }
 
 body,
@@ -19,44 +18,44 @@ html,
 
 .btn {
   font-size: 0.9rem;
-  font-weight: 600;
-  padding: 0.75rem 1.25rem;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Vibrant gradient */
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #6b9df6, #4a80e3); /* Vibrant gradient */
   color: white;
   border: none;
-  box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3); /* Stronger shadow */
+  box-shadow: 0 4px 12px rgba(74, 128, 227, 0.3); /* Enhanced shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
-  background: linear-gradient(135deg, #5b0bc6, #1d61d7); /* Deeper gradient on hover */
-  transform: translateY(-4px); /* Lift effect */
-  box-shadow: 0 8px 20px rgba(93, 11, 198, 0.4);
+  transform: translateY(-3px); /* Lift on hover */
+  background: linear-gradient(135deg, #4a80e3, #355fa7); /* Darker hover effect */
+  box-shadow: 0 8px 20px rgba(53, 95, 167, 0.4);
 }
 
 .App-link {
-  color: #4a90e2;
-  text-decoration: none;
-  font-weight: 600;
+  color: #4285f4;
+  text-decoration: underline dotted;
   transition: color 0.3s ease;
 }
 
 .App-link:hover {
-  color: #6a11cb; /* Matching gradient theme */
+  color: #1e62d6;
 }
 
 .btn-light {
-  border-color: #ccc;
-  background-color: #fff;
+  border: 1px solid #ddd;
+  background-color: #fefefe;
   color: #555;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .btn-light:hover {
-  background-color: #f0f0f0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: #bbb;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .cursor-pointer {
@@ -64,88 +63,94 @@ html,
 }
 
 .shadow {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15) !important;
 }
 
 .modal-content,
 .card {
   overflow: hidden;
-  border-radius: 15px;
-  background: #ffffff;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+  border-radius: 16px;
+  background: linear-gradient(145deg, #ffffff, #f8f8f8); /* Soft card gradient */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 hr {
-  opacity: 0.2;
-  border-top: 1px solid #bbb;
+  opacity: 0.3;
+  border-top: 1px solid rgba(200, 200, 200, 0.3); /* Lightened divider */
 }
 
 .table th {
-  background-color: #f8f9fc;
+  background-color: #f5f9ff; /* Softer header */
   color: #444;
-  border-bottom: 2px solid #dbe2ea;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(74, 144, 226, 0.1);
 }
 
 .table td {
-  color: #555;
-  padding: 0.75rem;
+  color: #333;
+  padding: 0.8rem;
 }
 
 .form-control {
   background: #ffffff;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 12px;
-  padding: 0.75rem;
+  padding: 0.65rem 0.9rem;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .form-control:hover,
 .form-control:focus {
-  border-color: #6a11cb;
-  box-shadow: 0 0 12px rgba(106, 17, 203, 0.3);
+  border-color: #6b9df6;
+  box-shadow: 0 0 10px rgba(107, 157, 246, 0.3);
+}
+
+.form-control::placeholder {
+  color: #aaa;
+  font-style: italic;
 }
 
 .sidebar {
-  background: linear-gradient(to bottom, #2c3e50, #34495e);
+  background: linear-gradient(to bottom, #34495e, #2c3e50); /* Sleek gradient */
   color: #ecf0f1;
-  border-right: 2px solid #2c3e50;
+  border-right: 3px solid #2a3540;
 }
 
 .sidebar-link {
-  padding: 14px 20px;
+  padding: 14px 24px;
   color: #ecf0f1;
   display: flex;
   align-items: center;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s;
+  border-radius: 12px;
+  transition: background 0.3s, transform 0.3s, color 0.3s;
 }
 
 .sidebar-link:hover {
-  background: #6a11cb;
-  color: #fff;
-  border-radius: 12px;
+  background: #6b9df6;
+  color: white;
   transform: translateX(8px); /* Slide effect */
 }
 
 .sidebar-link.active {
-  background: #1abc9c; /* Green for active link */
+  background: #1abc9c;
   color: white;
 }
 
 .card {
-  background: linear-gradient(to top left, #ffffff, #f0f5fc);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to top left, #ffffff, #f9fafb);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
 }
 
 .image-upload-container {
-  background: #f9fafb;
-  border: 2px dashed #ccc;
-  border-radius: 12px;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  background: #f9fafc;
+  border: 2px dashed #bbb;
+  border-radius: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image-upload-container:hover {
-  border-color: #6a11cb;
-  box-shadow: 0 0 16px rgba(106, 17, 203, 0.3);
+  border-color: #6b9df6;
+  box-shadow: 0 0 12px rgba(107, 157, 246, 0.4);
 }
 
 .image-container {
@@ -155,10 +160,10 @@ hr {
 }
 
 .product-image {
-  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, filter 0.3s;
 }
 
 .image-container:hover .product-image {
-  transform: scale(1.1); /* Enhanced zoom */
-  filter: brightness(1.1); /* Slight brightness on hover */
+  transform: scale(1.1); /* Bigger zoom on hover */
+  filter: brightness(1.1); /* Subtle brightness */
 }
