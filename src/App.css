@@ -1,11 +1,11 @@
 html {
-  font-size: 1rem; /* Adjusted font size */
-  background: #f7f8fc;
+  font-size: 1rem;
+  background: #f7f8fc; /* Softer background for a cleaner feel */
 }
 
 body,
 .form-control {
-  font-size: 0.9rem; /* Slightly smaller font size */
+  font-size: 1rem;
 }
 
 body,
@@ -18,20 +18,20 @@ html,
 .btn {
   font-size: 1rem;
   font-weight: 500;
-  padding: 0.8rem 1.4rem; /* Adjusted padding for a more balanced button */
-  border-radius: 50px;
-  background: linear-gradient(135deg, #6c63ff, #00bcd4);
+  padding: 0.75rem 1.2rem;
+  border-radius: 50px; /* Rounded button edges */
+  background: linear-gradient(135deg, #6c63ff, #00bcd4); /* Gradient with vibrant colors */
   color: #fff;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease-out;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out; /* Smooth transition for hover effects */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(135deg, #512da8, #03a9f4);
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  background: linear-gradient(135deg, #512da8, #03a9f4); /* Darker gradient on hover */
 }
 
 .App-link {
@@ -39,27 +39,68 @@ html,
   text-decoration: none;
 }
 
-.card {
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  transition: all 0.3s ease-out;
+.btn-light {
+  border-color: #dedede;
 }
 
+.btn-light:hover {
+  border-color: #dedede;
+  background-color: #f7f7f7;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.modal-content,
+.card {
+  overflow: hidden;
+  border-radius: 16px; /* Very soft rounded corners */
+  background-color: #ffffff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Larger, softer shadow */
+  transition: all 0.3s ease-out; /* Smooth transition on hover */
+}
+
+.modal-content:hover,
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px); /* Slight lift effect */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); /* Stronger shadow effect */
 }
 
 hr {
   opacity: 0.2;
 }
 
+.table th {
+  padding: 1rem;
+  background-color: #f0f1f6; /* Light gray header */
+  border-bottom: 1px solid #e0e0e0;
+  font-weight: 600;
+}
+
+.table td {
+  padding: 1rem;
+  color: #555; /* Darker text for readability */
+}
+
+.table tr th:first-child,
+.table tr td:first-child {
+  padding-left: 0;
+}
+
+.table tr th:last-child,
+.table tr td:last-child {
+  padding-right: 0;
+}
+
 .form-control {
   background: #ffffff;
   font-weight: 400;
-  padding: 1rem 1.2rem;
+  padding: 0.75rem 1rem;
   border: 2px solid #e0e0e0;
   border-radius: 12px;
   transition: all 0.3s ease;
@@ -70,25 +111,26 @@ hr {
 }
 
 .form-control::placeholder {
-  color: #aaa;
+  color: #aaa; /* Soft gray placeholder */
 }
 
 .form-control:focus {
-  border-color: #00bcd4;
-  box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
+  border-color: #00bcd4; /* Focused input border color */
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.2); /* Focus glow */
   background: #ffffff;
 }
 
-.table th {
-  padding: 0.8rem;
-  background-color: #f0f1f6;
-  border-bottom: 1px solid #e0e0e0;
-  font-weight: 600;
+#invoiceCapture {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.table td {
-  padding: 0.8rem;
-  color: #555;
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .sidebar {
@@ -100,11 +142,11 @@ hr {
   background-color: #ffffff;
   overflow-y: auto;
   border-right: 1px solid #e0e0e0;
-  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow for sidebar */
 }
 
 .sidebar-link {
-  padding: 12px 20px;
+  padding: 15px 20px;
   color: #333;
   display: flex;
   align-items: center;
@@ -124,11 +166,26 @@ hr {
 }
 
 .content {
-  padding: 1.5rem;
+  padding: 24px;
   flex-grow: 1;
   background-color: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft shadow for content */
+}
+
+.card {
+  border: none;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  padding-top: 56px;
+}
+
+.sidebar-link.active {
+  font-weight: bold;
+  color: #ffffff; /* White for active link */
+  background-color: #007bff;
 }
 
 .image-upload-container {
@@ -140,14 +197,14 @@ hr {
 }
 
 .image-upload-container:hover {
-  border-color: #00bcd4;
-  filter: brightness(1.1);
-  transform: scale(1.02);
+  border-color: #00bcd4; /* Blue border on hover */
+  filter: brightness(1.1); /* Slight brightening */
+  transform: scale(1.02); /* Slight scale-up effect */
 }
 
 .image-upload-container.drag-over {
   filter: blur(4px);
-  border-color: #007bff;
+  border-color: #007bff; /* Darker border while dragging */
 }
 
 .image-container {
@@ -161,56 +218,5 @@ hr {
 }
 
 .image-container:hover .product-image {
-  filter: blur(2px);
-}
-
-.invoice-header {
-  font-size: 1.3rem; /* Slightly smaller header */
-  font-weight: 700;
-  color: #333;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.invoice-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-
-.invoice-form .form-group {
-  width: 48%;
-}
-
-.invoice-form .form-group input,
-.invoice-form .form-group select {
-  width: 100%;
-}
-
-.invoice-form .form-group label {
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.invoice-actions {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 2rem;
-}
-
-.invoice-actions .btn {
-  font-size: 1rem; /* Adjusted button font size */
-  padding: 0.8rem 1.4rem;
-  margin-left: 1rem;
-}
-
-.invoice-actions .btn-primary {
-  background-color: #00bcd4;
-  border-color: #00bcd4;
-}
-
-.invoice-actions .btn-primary:hover {
-  background-color: #007bff;
-  border-color: #007bff;
+  filter: blur(2px); /* Blur the image on hover */
 }
