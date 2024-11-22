@@ -1,6 +1,6 @@
 html {
   font-size: 0.9rem;
-  background: #f2f3f7; /* Soft off-white background */
+  background: #f3f4f8; /* Light gray background for a softer overall feel */
 }
 
 body,
@@ -20,19 +20,21 @@ html,
   font-weight: 500;
   padding: 0.66rem;
   border-radius: 0.5rem;
-  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.05) !important;
-  background: #007bff; /* Subtle button background */
-  color: #ffffff; /* White text on buttons */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+  background: linear-gradient(135deg, #007bff, #00b4d8); /* Gradient button background */
+  color: #ffffff; /* White text */
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
 .btn:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  background: linear-gradient(135deg, #0056b3, #009ac7); /* Darker gradient on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
 }
 
 .App-link {
   color: #61dafb; /* Soft blue color */
+  text-decoration: none;
 }
 
 .btn-light {
@@ -55,9 +57,16 @@ html,
 .modal-content,
 .card {
   overflow: hidden;
-  border-radius: 0.756rem;
-  background-color: #ffffff; /* White background for cards and modals */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
+  border-radius: 12px; /* Rounder corners for a softer look */
+  background-color: #ffffff; /* White background for cards */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Larger shadow for cards */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth shadow and lift transition */
+}
+
+.modal-content:hover,
+.card:hover {
+  transform: translateY(-4px); /* Slight lift effect on hover */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15); /* Deeper shadow for hover */
 }
 
 hr {
@@ -65,15 +74,17 @@ hr {
 }
 
 .table th {
-  border-top: 1px solid #0000001a;
-  border-bottom: 1px solid #0000001a;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
   padding: 1rem;
-  background-color: #f9f9f9; /* Light gray background for table headers */
+  background-color: #f9fafb; /* Light gray header background */
+  font-weight: 600; /* Bold header text */
 }
 
 .table td {
   text-align: left;
   padding: 1rem;
+  color: #333; /* Darker text for better readability */
 }
 
 .table tr th:first-child,
@@ -87,27 +98,28 @@ hr {
 }
 
 .form-control {
-  background: #f5f7f9;
+  background: #f7f9fc; /* Lighter gray background */
   font-weight: 400;
   padding: 0.5rem 0.75rem;
   border: 1px solid #ddd;
-  border-radius: 5px; /* Soft rounded corners for inputs */
+  border-radius: 8px; /* Rounded corners for inputs */
   transition: all 0.3s ease; /* Smooth transition for focus effects */
 }
 
 .form-control:hover {
-  background: #f5f7f9;
+  background: #ffffff; /* White background on hover */
 }
 
 .form-control::placeholder,
 .form-control::-ms-input-placeholder,
 .form-control:-ms-input-placeholder {
-  color: #9fa8b0; /* Subtle gray placeholder text */
+  color: #b0bec5; /* Soft gray placeholder text */
 }
 
 .form-control:focus {
   background: #ffffff;
-  border-color: #007bff; /* Blue border on focus */
+  border-color: #00b4d8; /* Blue border on focus */
+  box-shadow: 0 0 10px rgba(0, 180, 216, 0.2); /* Soft glow around input on focus */
 }
 
 #invoiceCapture {
@@ -125,85 +137,91 @@ hr {
 
 .sidebar {
   height: 100%;
-  border-radius: 5px;
+  border-radius: 8px; /* Softer sidebar edges */
   position: fixed;
   top: 56px; /* Adjust for Navbar height */
   left: 0;
   background-color: #f8f9fa;
   overflow-y: auto;
-  border-right: 1px solid #e0e0e0; /* Light border for sidebar separation */
+  border-right: 1px solid #e0e0e0; /* Light border for separation */
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on the sidebar */
 }
 
 .sidebar-link {
-  padding: 10px 20px;
-  color: #000;
-  display: flex; /* Flex for aligning icon and text */
-  align-items: center; /* Center the icon and text */
-  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 12px 20px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+  font-weight: 500;
 }
 
 .sidebar-link:hover {
-  background-color: #007bff;
-  color: #fff;
-  border-radius: 5px;
+  background-color: #00b4d8; /* Blue background on hover */
+  color: #ffffff; /* White text */
+  border-radius: 8px; /* Rounded corners on hover */
 }
 
 .sidebar-icon {
-  margin-right: 10px; /* Space between icon and text */
+  margin-right: 12px;
 }
 
 .content {
-  padding: 20px;
+  padding: 24px;
   flex-grow: 1;
+  background-color: #ffffff; /* White background for content */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Soft shadow around content */
+  border-radius: 12px; /* Rounded corners for content */
 }
 
 .card {
-  border: none; /* Remove border for cleaner look */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for card elevation */
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft card shadow */
 }
 
 body {
-  padding-top: 56px; /* Adjust based on the height of your Navbar */
+  padding-top: 56px; /* Adjust based on Navbar height */
 }
 
 .sidebar-link {
-  color: black; /* Default link color */
+  color: #333; /* Default link color */
   text-decoration: none;
 }
 
 .sidebar-link.active {
   font-weight: bold; /* Bold for active link */
-  color: rgb(0, 115, 255); /* Change color for active link */
+  color: rgb(0, 115, 255); /* Blue color for active link */
   background-color: #e9ecef; /* Optional background for active link */
 }
 
 .image-upload-container {
   background-color: #fafafa;
-  border: 2px dashed #ccc;
+  border: 2px dashed #ddd;
   cursor: pointer;
-  border-radius: 8px;
-  transition: border-color 0.2s ease-in-out, filter 0.3s ease-in-out; /* Smooth transitions */
+  border-radius: 12px;
+  transition: border-color 0.3s ease, filter 0.3s ease; /* Smooth transitions */
 }
 
 .image-upload-container:hover {
-  border-color: #666;
-  filter: brightness(1.1); /* Brighten on hover */
+  border-color: #00b4d8; /* Blue border on hover */
+  filter: brightness(1.1); /* Slight brightening on hover */
 }
 
 .image-upload-container.drag-over {
-  filter: blur(3px); /* Stronger blur while dragging files */
+  filter: blur(3px); /* Stronger blur while dragging */
   border-color: #007bff; /* Change border color when dragging */
 }
 
 .image-container {
   position: relative;
   overflow: hidden;
+  border-radius: 12px; /* Rounded image container */
 }
 
 .product-image {
-  transition: filter 0.3s ease-in-out; /* Smooth transition for blur effect */
+  transition: filter 0.3s ease-in-out;
 }
 
 .image-container:hover .product-image {
-  filter: blur(2px); /* Apply blur on hover */
+  filter: blur(2px); /* Blur the image on hover */
 }
