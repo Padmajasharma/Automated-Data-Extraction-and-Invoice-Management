@@ -1,12 +1,12 @@
 html {
-  font-size: 1rem;
-  background: linear-gradient(135deg, #f7f7f7, #e0e0e0); /* Light, soft gradient background for tranquility */
+  font-size: 0.9rem;
+  background: #eef2f7; /* Softened background color */
 }
 
 body,
 .form-control {
-  font-size: 1rem;
-  color: #555555; /* Warm, readable text for contrast */
+  font-size: 0.9rem;
+  color: #444; /* Slightly darker text for better readability */
 }
 
 body,
@@ -14,52 +14,39 @@ html,
 #root,
 .App {
   min-height: 100vh;
-  font-family: 'Roboto', sans-serif; /* Clean, modern font with excellent legibility */
 }
 
 .btn {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  padding: 0.8rem 1.4rem;
-  border-radius: 50px; /* Rounded edges for a sleek, friendly look */
-  background: linear-gradient(45deg, #ff9a9e, #fad0c4); /* Soft pinkish gradient for warmth */
+  padding: 0.66rem;
+  border-radius: 0.5rem;
+  background-color: #4a90e2; /* Richer blue color */
   color: white;
   border: none;
-  box-shadow: 0 4px 10px rgba(255, 154, 158, 0.2);
-  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2); /* Enhanced shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
-  transform: translateY(-6px); /* Subtle elevation on hover */
-  background: linear-gradient(45deg, #ff6b81, #ff9a9e); /* Richer gradient for hover effect */
-  box-shadow: 0 8px 20px rgba(255, 107, 129, 0.3);
-  filter: brightness(1.15); /* Soft brightness boost */
+  background-color: #357abd; /* Darker shade on hover */
+  box-shadow: 0 6px 16px rgba(53, 122, 189, 0.25);
 }
 
 .App-link {
-  color: #6c63ff;
-  text-decoration: underline dotted;
-  font-weight: 500;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-.App-link:hover {
-  color: #4a4ae0;
-  text-decoration: underline solid;
+  color: #007bff;
+  text-decoration: underline;
 }
 
 .btn-light {
-  border: 1px solid #ddd;
-  background-color: #ffffff;
-  color: #333;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  border-color: #ccc;
+  background-color: #fff;
+  color: #444;
 }
 
 .btn-light:hover {
   border-color: #bbb;
-  background-color: #f8f8f8;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0;
 }
 
 .cursor-pointer {
@@ -67,124 +54,101 @@ html,
 }
 
 .shadow {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
 .modal-content,
 .card {
   overflow: hidden;
-  border-radius: 20px;
-  background: #ffffff;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-}
-
-.modal-content:hover,
-.card:hover {
-  transform: translateY(-4px); /* Smooth hover effect with slight elevation */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
 }
 
 hr {
-  opacity: 0.2;
-  border-top: 1px solid rgba(180, 180, 180, 0.5); /* Soft, lighter divider for gentle separation */
+  opacity: 0.15; /* Increased opacity for visibility */
 }
 
 .table th {
-  background-color: #f8f8f8;
-  color: #666;
-  font-weight: 600;
-  padding: 1rem;
-  border-bottom: 1px solid rgba(200, 200, 200, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fb; /* Soft header background */
+  color: #555;
 }
 
 .table td {
-  color: #444;
-  padding: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.table td:hover {
-  background-color: #fafafa; /* Gentle hover effect for rows */
+  text-align: left;
+  color: #333;
 }
 
 .form-control {
   background: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 15px;
-  padding: 0.8rem 1rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease-in-out;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Rounded corners */
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .form-control:hover,
 .form-control:focus {
-  border-color: #ff6b81;
-  box-shadow: 0 0 12px rgba(255, 107, 129, 0.3);
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
 }
 
 .form-control::placeholder {
-  color: #bbb;
-  font-style: italic;
+  color: #aaa;
 }
 
 .sidebar {
-  background: #2d3e50; /* Deep muted blue-gray */
+  background-color: #2c3e50; /* Deep blue-gray */
   color: #ecf0f1;
-  border-right: 3px solid #34495e;
-  padding-top: 20px;
+  border-right: 2px solid #34495e;
 }
 
 .sidebar-link {
-  padding: 16px 20px;
+  padding: 12px 20px;
   color: #ecf0f1;
   display: flex;
   align-items: center;
-  border-radius: 15px;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .sidebar-link:hover {
-  background: #ff6b81;
+  background-color: #007bff;
   color: white;
-  transform: translateX(10px); /* Subtle sliding effect */
+  border-radius: 8px;
 }
 
 .sidebar-link.active {
-  background: #1abc9c;
+  background-color: #1abc9c; /* Green highlight for active link */
   color: white;
 }
 
 .card {
-  background: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
-  padding: 1.2rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .image-upload-container {
-  background: #f3f3f3;
-  border: 2px dashed #bbb;
-  border-radius: 20px;
-  transition: all 0.3s ease-in-out;
+  background-color: #f9fafb;
+  border: 2px dashed #aaa;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image-upload-container:hover {
-  border-color: #ff6b81;
-  box-shadow: 0 0 20px rgba(255, 107, 129, 0.3);
+  border-color: #007bff;
+  box-shadow: 0 0 12px rgba(0, 123, 255, 0.2);
 }
 
 .image-container {
   position: relative;
   overflow: hidden;
-  border-radius: 15px;
 }
 
 .product-image {
-  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }
 
 .image-container:hover .product-image {
-  transform: scale(1.1); /* Elegant zoom effect */
-  filter: brightness(1.2); /* Subtle brightness boost */
-  opacity: 0.95; /* Faint transparency effect */
+  transform: scale(1.05); /* Slight zoom on hover */
 }
